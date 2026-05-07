@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -11,71 +11,90 @@ body {
   min-height: 100vh;
   width: 100%;
 
+  background: linear-gradient(to top right, blue, red);
+  color: white;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  background: linear-gradient(135deg, rgb(30, 30, 255), rgb(255, 50, 90));
+  padding: 20px;
 }
 
-.container {
-  text-align: center;
+#container {
+  width: 100%;
+  max-width: 500px;
 
-  padding: 40px;
+  padding: 40px 30px;
 
-  border-radius: 20px;
+  border-radius: 18px;
 
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(53, 53, 53, 0.4)
+  );
 
-  backdrop-filter: blur(10px);
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
 
   color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 25px;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  text-align: center;
 }
 
 .buttons {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
 button {
-  padding: 12px 20px;
+  height: 45px;
+  width: 50%;
 
-  border: none;
-  border-radius: 12px;
-
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 10px;
 
   cursor: pointer;
+
+  font-weight: 600;
 
   transition: 0.3s;
 }
 
-.btn-primary {
-  background: white;
-  color: black;
-}
-
-.btn-primary:hover {
-  transform: scale(1.05);
-}
-
-.btn-secondary {
+#btn-cadastro {
   background: transparent;
   color: white;
 
-  border: 1px solid white;
+  border: 1px solid red;
 }
 
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: scale(1.05);
+#btn-lista {
+  background: transparent;
+  color: white;
+
+  border: 1px solid blue;
+}
+
+button:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.03);
 }
