@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #container {
   min-height: 100vh;
   width: 100%;
@@ -37,7 +41,9 @@ header {
   color: white;
 
   border: 1px solid white;
-  border-radius: 8px;
+  border-radius: 10px;
+
+  font-weight: 600;
 
   cursor: pointer;
 
@@ -46,6 +52,8 @@ header {
 
 #btn-cadastrar:hover {
   background-color: rgba(255, 255, 255, 0.1);
+
+  transform: scale(1.03);
 }
 
 main {
@@ -62,15 +70,25 @@ main {
 }
 
 .card-aniversario {
-  padding: 15px;
+  padding: 15px 20px;
 
-  border-radius: 12px;
+  border-radius: 16px;
 
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(8px);
 
   display: flex;
   align-items: center;
   gap: 15px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+  transition: 0.3s;
+}
+
+.card-aniversario:hover {
+  transform: translateY(-3px);
 }
 
 .card-aniversario img {
@@ -80,10 +98,79 @@ main {
   border-radius: 50%;
 
   object-fit: cover;
+
+  border: 2px solid white;
 }
 
 .info-aniversario {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.info-aniversario h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.info-aniversario p {
+  font-size: 0.95rem;
+
+  opacity: 0.9;
+}
+
+.info-aniversario span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.acoes {
+  margin-left: auto;
+
+  display: flex;
+  gap: 10px;
+}
+
+.acoes button {
+  padding: 8px 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.btn-editar {
+  background-color: rgb(255, 196, 0);
+  color: black;
+}
+
+.btn-remover {
+  background-color: rgb(255, 74, 74);
+  color: white;
+}
+
+.acoes button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+  .card-aniversario {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .acoes {
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+  .acoes button {
+    flex: 1;
+  }
 }

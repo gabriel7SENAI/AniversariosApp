@@ -5,6 +5,8 @@ import {
   push,
   set,
   get,
+  remove,
+  update,
 } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-database.js";
 
 const referencia = ref(database, "Pessoas");
@@ -27,4 +29,12 @@ export async function listar() {
   }
 
   return {};
+}
+
+export async function removerPessoa(id) {
+  await remove(ref(database, `Pessoas/${id}`));
+}
+
+export async function editarPessoa(id, dados) {
+  await update(ref(database, `Pessoas/${id}`), dados);
 }
