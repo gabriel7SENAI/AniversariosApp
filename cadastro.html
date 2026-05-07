@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cadastro.css" />
+    <title>Cadastro Aniversário</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="cadastro-caixa">
+        <h2>Cadastrar Aniversariante</h2>
+        <div id="area-input">
+          <input type="text" placeholder="Nome" id="input-nome" />
+          <div id="area-data">
+            <label for="input-aniversario">Data:</label>
+            <input type="text" placeholder="DD/MM" id="input-data" />
+          </div>
+          <div id="area-imagem">
+            <label for="input-imagem">Imagem:</label>
+
+            <input type="file" id="input-imagem" accept="image/*" />
+          </div>
+        </div>
+        <button id="btn-enviar">Enviar</button>
+        <button
+          id="btn-aniversarios"
+          onclick="window.location.href = './aniversario.html'"
+        >
+          Ver Lista de Aniversários
+        </button>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

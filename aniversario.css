@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+#container {
+  min-height: 100vh;
+  width: 100%;
+
+  color: white;
+  background: linear-gradient(to top right, blue, red);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+}
+
+header {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+
+  margin-bottom: 20px;
+}
+
+#btn-cadastrar {
+  padding: 10px 20px;
+
+  background-color: transparent;
+  color: white;
+
+  border: 1px solid white;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+#btn-cadastrar:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+}
+
+#lista-aniversarios {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card-aniversario {
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-aniversario img {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.info-aniversario {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
